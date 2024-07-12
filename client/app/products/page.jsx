@@ -2,7 +2,7 @@ import Table from "@/components/Table";
 import TdActions from "@/components/TdActions";
 
 async function ProductsPage() {
-  const res = await fetch(`${process.env.SERVER_HOST}/api/products`, {
+  const res = await fetch("http://localhost:4000/api/products", {
     cache: "no-store",
   });
   const products = await res.json();

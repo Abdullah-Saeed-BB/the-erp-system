@@ -23,7 +23,7 @@ const inputs = [
 export async function generateMetadata({ params }) {
   const { saleId } = params;
 
-  const res = await fetch(`${process.env.SERVER_HOST}/api/sales/${saleId}`, {
+  const res = await fetch(`http://localhost:4000/api/sales/${saleId}`, {
     cache: "no-store",
   });
   const data = await res.json();
@@ -36,7 +36,9 @@ export async function generateMetadata({ params }) {
 async function SalePage({ params }) {
   const { saleId } = params;
 
-  const res = await fetch(`${process.env.SERVER_HOST}/api/sales/${saleId}`, {
+  const res = await fetch(`http://localhost:4000
+    
+    /api/sales/${saleId}`, {
     cache: "no-store",
   });
   const data = await res.json();

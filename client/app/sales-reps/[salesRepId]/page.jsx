@@ -8,12 +8,9 @@ const inputs = [
 export async function generateMetadata({ params }) {
   const { salesRepId } = params;
 
-  const res = await fetch(
-    `${process.env.SERVER_HOST}/api/salesreps/${salesRepId}`,
-    {
-      cache: "no-store",
-    }
-  );
+  const res = await fetch(`http://localhost:4000/api/salesreps/${salesRepId}`, {
+    cache: "no-store",
+  });
   const data = await res.json();
 
   return {
@@ -25,7 +22,8 @@ async function SalesRepPage({ params }) {
   const { salesRepId } = params;
 
   const res = await fetch(
-    `${process.env.SERVER_HOST}/api/salesreps/${salesRepId}`,
+    `http://localhost:4000
+    /api/salesreps/${salesRepId}`,
     {
       cache: "no-store",
     }

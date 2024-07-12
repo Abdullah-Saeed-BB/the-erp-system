@@ -2,12 +2,9 @@ import { NextResponse } from "next/server";
 
 export async function GET(request, { params }) {
   const { path, elementId } = params;
-  const res = await fetch(
-    `${process.env.SERVER_HOST}/api/${path}/${elementId}`,
-    {
-      cache: "no-store",
-    }
-  );
+  const res = await fetch(`http://localhost:4000/api/${path}/${elementId}`, {
+    cache: "no-store",
+  });
   const data = await res.json();
 
   return NextResponse.json(data);
@@ -27,16 +24,13 @@ export async function PUT(request, { params }) {
     updatedElement.createdAt = new Date(updatedElement.createdAt);
   }
 
-  const res = await fetch(
-    `${process.env.SERVER_HOST}/api/${path}/${elementId}`,
-    {
-      method: "PUT",
-      body: JSON.stringify(updatedElement),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    }
-  );
+  const res = await fetch(`http://localhost:4000/api/${path}/${elementId}`, {
+    method: "PUT",
+    body: JSON.stringify(updatedElement),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
   const data = await res.json();
 
   return NextResponse.json(data);
@@ -45,12 +39,9 @@ export async function PUT(request, { params }) {
 export async function DELETE(request, { params }) {
   const { path, elementId } = params;
 
-  const res = await fetch(
-    `${process.env.SERVER_HOST}/api/${path}/${elementId}`,
-    {
-      method: "DELETE",
-    }
-  );
+  const res = await fetch(`http://localhost:4000/api/${path}/${elementId}`, {
+    method: "DELETE",
+  });
   const data = await res.json();
 
   return NextResponse.json(data);

@@ -10,12 +10,9 @@ const inputs = [
 
 export async function generateMetadata({ params }) {
   const { productId } = params;
-  const res = await fetch(
-    `${process.env.SERVER_HOST}/api/products/` + productId,
-    {
-      cache: "no-store",
-    }
-  );
+  const res = await fetch(`http://localhost:4000/api/products/${productId}`, {
+    cache: "no-store",
+  });
   const data = await res.json();
 
   return {
@@ -26,12 +23,9 @@ export async function generateMetadata({ params }) {
 async function ProductPage({ params }) {
   const { productId } = params;
 
-  const res = await fetch(
-    `${process.env.SERVER_HOST}/api/products/${productId}`,
-    {
-      cache: "no-store",
-    }
-  );
+  const res = await fetch(`http://localhost:4000/api/products/${productId}`, {
+    cache: "no-store",
+  });
   const data = await res.json();
 
   return (

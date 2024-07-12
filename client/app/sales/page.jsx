@@ -2,7 +2,7 @@ import Table from "@/components/Table";
 import TdActions from "@/components/TdActions";
 
 async function SalesPage() {
-  const res = await fetch(`${process.env.SERVER_HOST}/api/sales`, {
+  const res = await fetch("http://localhost:4000/api/sales", {
     cache: "no-store",
   });
   const sales = await res.json();

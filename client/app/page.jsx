@@ -1,11 +1,10 @@
-import Card from "@/components/Card";
 import BarChart from "@/components/dashboard/BarChart";
 import ChartCard from "@/components/dashboard/ChartCard";
 import PieCahrt from "@/components/dashboard/PieChart";
 import Link from "next/link";
 
 async function Dashborad() {
-  const resSales = await fetch(`${process.env.SERVER_HOST}/api/sales`, {
+  const resSales = await fetch("http://localhost:4000/api/sales", {
     cache: "no-store",
   });
   const sales = await resSales.json();
@@ -25,7 +24,7 @@ async function Dashborad() {
     );
 
   const resSalesReps = await fetch(
-    `${process.env.SERVER_HOST}/api/salesreps/countSales`,
+    "http://localhost:4000/api/salesreps/countSales",
     {
       cache: "no-store",
     }

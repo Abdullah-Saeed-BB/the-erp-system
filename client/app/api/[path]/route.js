@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 export async function GET(request, { params }) {
   const { path } = params;
-  const res = await fetch(`${process.env.SERVER_HOST}/api/` + path, {
+  const res = await fetch(`http://localhost:4000/api/${path}`, {
     next: { revalidate: 3 },
   });
   const products = await res.json();
@@ -19,7 +19,7 @@ export async function POST(request, { params }) {
     newElement[pair[0]] = isNaN(+pair[1]) ? pair[1] : +pair[1];
   }
 
-  const res = await fetch(`${process.env.SERVER_HOST}/api/` + path, {
+  const res = await fetch(`http://localhost:4000/api/${path}`, {
     method: "POST",
     body: JSON.stringify(newElement),
     headers: {
