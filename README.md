@@ -1,6 +1,9 @@
 Developed an ERP system that contains products, sales reps, and sales.<br/> It's a full-stack project.
+
 ## Technologies:
+
 ### Front-end
+
 <div>
  <img src="https://img.shields.io/badge/Tailwind CSS-06B6D4?logo=tailwindcss&logoColor=white&style=for-the-badge" height="30" alt="Tailwind Css logo"/>
  <img src="https://img.shields.io/badge/Next JS-black?logo=next.js&logoColor=white&style=for-the-badge" height="30" alt="Next.js logo"/>
@@ -8,28 +11,44 @@ Developed an ERP system that contains products, sales reps, and sales.<br/> It's
 </div>
 
 ### Back-end
+
 <div>
  <img src="https://img.shields.io/badge/Express-dbd02c?logo=express&logoColor=black&style=for-the-badge" height="30" alt="Express logo"/>
  <img src="https://img.shields.io/badge/PostgreSQL-385a96?logo=postgresql&logoColor=white&style=for-the-badge" height="30" alt="PostgreSQL logo"/>
  <img src="https://img.shields.io/badge/Prisma-6562f0?logo=prisma&logoColor=white&style=for-the-badge" height="30" alt="Prisma logo"/>
 </div>
 
-*(under this need updated)*
-## Requirements: 
+_(under this need updated)_
 
-## Steps:
-Requirment: You have to install PostgreSQL in you computer
-.1 Clone the project or you can download it.<br/>
-.2 Before do anything with to the project, you have to create new to user it in the project, so open postgres in cmd: <br/>
-   .2.1 In Windows `psql -U postgres`<br/>
-   In Linux (Ubuntu) `sudo -i -u postgres`, `psql`<br/>
-   .2.2 Should shown something like this `postgres=# ` That mean that you opend postgres. Now to create new user run `CREATE USER theerp_user WITH PASSWORD '1234';`<br/>
-   .2.3 The user have to be a SUPERUSER to has the permission in editing data, so run this command `ALTER USER theerp_user WITH SUPERUSER;`<br/>
-   .2.4 Now you created user with SUPERUSER role, now to get out from postgres run `\q`<br/>
-.3 To make the server get the configration of the user, move to 'server' dir, and copy paste the .env.example and rename it to .env, (Note: if you create another username or password change it in .env)<br/>
-.4 You have to create database to use it in the project, so open the terminal and run `npx prisma migrate dev`<br/>
-.5 Then run this `npm run start` To run the server<br/>
-.6 Now open new terminal and move to 'client' dir, and run this:<br/>
-`npm install`,<br/>
-`npm run build && npm run start`<br/>
-.7 Congratulation,  now open the browser the localhost:3000<br/>
+## Prerequisites:
+
+**Postgres** relational database management system.
+
+## Installation Guide:
+
+This guide walks you through setting up the project on your machine
+
+1. You need to create a user in Postgres. So, these commands will create a user named `theerp_user` with the password `1234` and grant it superuser privileges:<br/>
+   **Windows**<br/>
+   <pre>
+   psql -U postgres
+   CREATE USER theerp_user WITH PASSWORD '1234';
+   ALTER USER theerp_user WITH SUPERUSER;
+   \q
+   </pre>
+   **Linux (Ubuntu):**
+   <pre>sudo -i -u postgres
+   psql
+   CREATE USER theerp_user WITH PASSWORD 'your_password_here';
+   ALTER USER theerp_user WITH SUPERUSER;
+   \q</pre>
+2. Clone or download the project repository.
+3. Navigate to `server` directory, and rename `.env.example` to `.env`.
+4. Open the terminal and navgiate to `server` directory, run the following command to create database schema:
+   `npx prisma migrate dev`
+5. In `server` directory, run this command to start the server:
+   `npm run start`
+6. Open a new terminal and navigate to `client` directory, and install dependencies:
+   `npm install`
+7. In `client` directory, run this command to start the client-side application:
+   `npm run build && npm run start`
