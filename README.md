@@ -18,18 +18,16 @@ Developed an ERP system that contains products, sales reps, and sales.<br/> It's
  <img src="https://img.shields.io/badge/Prisma-6562f0?logo=prisma&logoColor=white&style=for-the-badge" height="30" alt="Prisma logo"/>
 </div>
 
-_(under this need updated)_
-
 ## Prerequisites:
 
-**Postgres** relational database management system.
+**PostgreSQL** relational database management system.
 
 ## Installation Guide:
 
 This guide walks you through setting up the project on your machine
 
 1. You need to create a user in Postgres. So, these commands will create a user named `theerp_user` with the password `1234` and grant it superuser privileges:<br/>
-   **Windows**<br/>
+   **Windows:**<br/>
    <pre>
    psql -U postgres
    CREATE USER theerp_user WITH PASSWORD '1234';
@@ -44,11 +42,11 @@ This guide walks you through setting up the project on your machine
    \q</pre>
 2. Clone or download the project repository.
 3. Navigate to `server` directory, and rename `.env.example` to `.env`.
-4. Open the terminal and navgiate to `server` directory, run the following command to create database schema:
+4. Open the terminal and navigate to `server` directory, run the following command to create database schema:
    `npx prisma migrate dev`
 5. In `server` directory, run this command to start the server:
    `npm run start`
-6. Open a new terminal and navigate to `client` directory, and install dependencies:
+6. Open a new terminal navigate to `client` directory, and install dependencies:
    `npm install`
 7. In `client` directory, run this command to start the client-side application:
    `npm run build && npm run start`
