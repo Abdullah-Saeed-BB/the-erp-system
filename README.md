@@ -1,6 +1,6 @@
 I developed a full-stack ERP system application, to manage products, sales reps, and sales.
 
-## Technologies:
+## Technologies
 ### Front-end (client)
 
 <div>
@@ -16,10 +16,10 @@ I developed a full-stack ERP system application, to manage products, sales reps,
  <img src="https://img.shields.io/badge/Prisma-6562f0?logo=prisma&logoColor=white&style=for-the-badge" height="30" alt="Prisma logo"/>
 </div>
 
-## Prerequisites:
+## Prerequisites
 **PostgreSQL** relational database management system.
 
-## Installation Guide:
+## Installation Guide
 
 This guide walks you through setting up the project on your machine
 
@@ -47,3 +47,10 @@ This guide walks you through setting up the project on your machine
    `npm install`
 7. In `client` directory, run this command to start the client-side application:<br/>
    `npm run build && npm run start`
+
+## Screenshots
+![Screenshot (107)](https://github.com/user-attachments/assets/208dea72-cbd0-4be5-beb7-87cd9cbe499a)
+![Screenshot (108)](https://github.com/user-attachments/assets/d988d69c-5269-48f4-9cd8-96ccf1ee35a0)
+![Screenshot (110)](https://github.com/user-attachments/assets/618988a2-aae9-4760-a518-8a7f39280266)
+![Screenshot (111)](https://github.com/user-attachments/assets/f84b145c-c8f2-48d5-b39e-d9354f397b04)
+![Screenshot (112)](https://github.com/user-attachments/assets/23d09513-7640-411d-bbc0-955602e74bbf)
