@@ -49,8 +49,8 @@ This guide walks you through setting up the project on your machine
    `npm run build && npm run start`
 
 ## Screenshots
-![Screenshot (107)](https://github.com/user-attachments/assets/208dea72-cbd0-4be5-beb7-87cd9cbe499a)
-![Screenshot (108)](https://github.com/user-attachments/assets/d988d69c-5269-48f4-9cd8-96ccf1ee35a0)
-![Screenshot (110)](https://github.com/user-attachments/assets/618988a2-aae9-4760-a518-8a7f39280266)
-![Screenshot (111)](https://github.com/user-attachments/assets/f84b145c-c8f2-48d5-b39e-d9354f397b04)
-![Screenshot (112)](https://github.com/user-attachments/assets/23d09513-7640-411d-bbc0-955602e74bbf)
+![Screenshot (107)](https://github.com/user-attachments/assets/68ab8aa3-e2fe-4a4b-90d9-3163e094b9af)
+![Screenshot (112)](https://github.com/user-attachments/assets/e13febd5-439b-4389-921a-d37aa977bc79)
+![Screenshot (108)](https://github.com/user-attachments/assets/63e563e9-ab4a-4020-8631-03d7dcd73a1d)
+![Screenshot (110)](https://github.com/user-attachments/assets/da51b3fc-89d7-4f01-918f-25286094b143)
+![Screenshot (111)](https://github.com/user-attachments/assets/52ea5e9d-7c02-465b-afdb-c8f6148216f8)
