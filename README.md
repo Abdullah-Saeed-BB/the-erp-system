@@ -46,7 +46,7 @@ This guide walks you through setting up the project on your machine
 6. Open a new terminal navigate to `client` directory, and install dependencies:<br/>
    `npm install`
 7. In `client` directory, run this command to start the client-side application:<br/>
-   `npm run build && npm run start`
+   `npm run build`, and `npm run start`
 
 ## Screenshots
 ![Screenshot (107)](https://github.com/user-attachments/assets/68ab8aa3-e2fe-4a4b-90d9-3163e094b9af)
